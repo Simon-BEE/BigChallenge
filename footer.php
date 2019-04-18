@@ -1,10 +1,9 @@
         <nav id="primary_nav">
             <ul>
-                <li><a href="">Site</a></li>
+                <li><a href="">Accueil</a></li>
+                <li><a href="products.php">Les bières</a></li>
                 <li><a href="">Mon profil</a></li>
-                <li><a href="">Les bières</a></li>
-                <li><a href="">Contact</a></li>
-                <li><a class="deconnect" href="">Déconnexion</a></li>
+                <li><a class="deconnect" href="login.php">Connexion</a></li>
                 <li class="top"><a href="#home">Top</a></li>
             </ul>
         </nav>

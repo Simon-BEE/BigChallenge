@@ -1,12 +1,5 @@
 <?php include 'header.php' ?>
 
-<body id="home">
-    <div class="wrapper">
-        <header>
-            <h1 class="logo"><a href="">Bread<span class="color">Beer</span>Shop</a></h1>
-            <a class="to_nav" href="#primary_nav">Menu</a>
-        </header>
-
         <article>
             <h2>You all right, Dexter?</h2>
             <p>Rorschach would say you have a hard time relating to others. You look…perfect. Only you could make those words cute. I like seafood. I feel like a jigsaw puzzle missing a piece. And I'm not even sure what the picture should be.</p>

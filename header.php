@@ -11,3 +11,9 @@
     <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/img/favicon.png" />
 </head>
+<body id="home">
+    <div class="wrapper">
+        <header>
+            <h1 class="logo"><a href="">Bread<span class="color">Beer</span>Shop</a></h1>
+            <a class="to_nav" href="#primary_nav">Menu</a>
+        </header>
