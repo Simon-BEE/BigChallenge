@@ -45,9 +45,9 @@ Créer un espace client html5 qui présentera:
 
 [x] Mise en forme CSS / responsive
 
-[ ] Implanter tableau des bières dans la bdd
+[x] Implanter tableau des bières dans la bdd
 
-[ ] Ajout nouveau utilisateur dans une table dans la bdd
+[x] Ajout nouveau utilisateur dans une table dans la bdd
 
 [ ] Faire fonctionner le système de connexion
 
