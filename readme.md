@@ -1,7 +1,9 @@
 # CHALLENGE 
 ## *18/04/2019 au 23/04/2019*
 ### Page Boutique + Form inscription + Form connexion + Prise de commande + accès espace client avec affichage des commandes liée à celui-ci.
-Pour ce défis vous allez devoir créer une “petite boutique” de bières en ligne.En partant du site bière actuel, il vous faudra séparer les bières du formulaire de manière à que le site ressemble à cela au finalPage Biere => Compte ? FormConnexion : FormInscription=>FormAdresse(Prérempli)=>Confirmation de commande.
+Pour ce défis vous allez devoir créer une “petite boutique” de bières en ligne. En partant du site bière actuel, il vous faudra séparer les bières du formulaire de manière à que le site ressemble à cela au final : 
+
+Page Biere => Compte ? FormConnexion : FormInscription=>FormAdresse(Prérempli)=>Confirmation de commande.
 ## 1. Rendre le site bière responsive
 Peu importe la technologie employée.
 ## 2. Mettre tableau bière en bdd puis récupérer les données pour les afficher
@@ -36,5 +38,21 @@ Créer un espace client html5 qui présentera:
     * id(int)
     * id_client(int)
     * ids_product(text)
-* Pour la colonne ids_product, il vous sera nécessaire de lui envoyer un tableau contenant les ids de tous les produits commandés.Pour ce faire vous aurez besoin d’utiliser la methode serialize :  [Serialize](https://www.php.net/manual/fr/function.serialize.php)
+* Pour la colonne ids_product, il vous sera nécessaire de lui envoyer un tableau contenant les ids de tous les produits commandés. Pour ce faire vous aurez besoin d’utiliser la methode serialize :  [Serialize](https://www.php.net/manual/fr/function.serialize.php)
 * Et bien sûr il vous faudra également une méthode pour réutiliser ce tableau une fois récupéré de la bdd. Je vous laisse chercher !
+# TODO
+[x] Structure HTML
+
+[x] Mise en forme CSS / responsive
+
+[ ] Implanter tableau des bières dans la bdd
+
+[ ] Ajout nouveau utilisateur dans une table dans la bdd
+
+[ ] Faire fonctionner le système de connexion
+
+[ ] Pouvoir modifier ses informations perso
+
+[ ] Tableau récap des commandes
+
+[ ] Vérifier toutes les fonctionnalités et les potentielles failles
