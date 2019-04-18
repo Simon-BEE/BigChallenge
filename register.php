@@ -1,5 +1,12 @@
-<?php include('/header.php');  ?>
-<?php
+<?php 
+require 'db.php';
+include('/header.php');
+require 'connect.php';
+
+if ($connect) {
+    header("Location: index.php");
+}
+
 
 if(!empty($_POST)){
     $prenom = ($_POST["prenom"]);
@@ -38,14 +45,14 @@ if(!empty($_POST)){
                         ":password" => $password
                     ]);
 
-                    /*if($result){
+                    if($result){
                         $_SESSION["connect"] = true;
                         $_SESSION["nom"] = $nom;
-                        header("Location: page.php");
+                        header("Location: profil.php");
                     }else{
                         die("erreur enregistrement en bdd");
                         // TODO : signaler erreur
-                    }*/
+                    }
 
                 }else{
                     die("mdp différents");

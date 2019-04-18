@@ -41,18 +41,11 @@ Créer un espace client html5 qui présentera:
 * Pour la colonne ids_product, il vous sera nécessaire de lui envoyer un tableau contenant les ids de tous les produits commandés. Pour ce faire vous aurez besoin d’utiliser la methode serialize :  [Serialize](https://www.php.net/manual/fr/function.serialize.php)
 * Et bien sûr il vous faudra également une méthode pour réutiliser ce tableau une fois récupéré de la bdd. Je vous laisse chercher !
 # TODO
-[x] Structure HTML
-
-[x] Mise en forme CSS / responsive
-
-[x] Implanter tableau des bières dans la bdd
-
-[x] Ajout nouveau utilisateur dans une table dans la bdd
-
-[ ] Faire fonctionner le système de connexion
-
-[ ] Pouvoir modifier ses informations perso
-
-[ ] Tableau récap des commandes
-
-[ ] Vérifier toutes les fonctionnalités et les potentielles failles
+- [x] Structure HTML
+- [x] Mise en forme CSS / responsive
+- [x] Implanter tableau des bières dans la bdd
+- [x] Ajout nouveau utilisateur dans une table dans la bdd
+- [x] Faire fonctionner le système de connexion
+- [ ] Pouvoir modifier ses informations perso
+- [ ] Tableau récap des commandes
+- [ ] Vérifier toutes les fonctionnalités et les potentielles failles

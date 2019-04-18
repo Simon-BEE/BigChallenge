@@ -1,9 +1,29 @@
-<?php include('/header.php');  ?>
+<?php 
+include('/header.php');
+require 'connect.php';
+
+if ($connect) {
+    require_once 'db.php';
+    $sql2 = "SELECT * FROM users WHERE `email`= :email";
+    $state = $pdo->prepare($sql2);
+    $state->execute([":email" => $_SESSION["email"]]);
+    $usermail = $state->fetch();
+    if ($usermail) {
+        $user = $usermail["prenom"];
+    } else {
+        $user = false;
+    }  
+} else {
+    header('Location: login.php');
+}
+
+
+?>
 
 <section class="profil">
 
     <div class="welcome">
-        <h2>Bonjour, <!--<?= $username ?>-->.</h2>
+        <h2>Bonjour, <?= $user ?>.</h2>
         <p>Content de te revoir !</p>
     </div>
 
@@ -50,6 +70,9 @@
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
+
+    <p>T'as fait le tour ?<a href="index.php?deconnect=true">Déconnecte toi</a></p>
+
 </section>
 
 <?php include('/footer.php');  ?>

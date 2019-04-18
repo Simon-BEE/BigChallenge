@@ -1,34 +1,36 @@
-<?php include 'header.php' ?>
+<?php 
+include 'header.php';
+require 'connect.php';
+?>
 
         <article>
-            <h2>You all right, Dexter?</h2>
-            <p>Rorschach would say you have a hard time relating to others. You look…perfect. Only you could make those words cute. I like seafood. I feel like a jigsaw puzzle missing a piece. And I'm not even sure what the picture should be.</p>
+            <h2>Qui sommes nous ?</h2>
+            <p>Nous sommes une petite équipe composée de deux membres. Julien et Kevin. Amis de longue date, nous avons décidé de créer cette entreprise ensemble autour de notre passion commune : La Bière !</p>
+            <p>En effet, passionés par cette boisson gazeuse légérement alcoolisée depuis de nombreuses années, nous nous sommes réunis il y a un peu plus de deux ans afin de créer notre propre brasserie.</p>
+            <p>Recherchant un concept novateur et écologique, une notion très importante à nos yeux, nous avons décidé d'inventer un produit issu des invendus de pains de nombreuses boulangeries situées dans notre secteur. Après de longues semaines d'études et de recherche pour mettre au point une recette refletant au mieux les différents arômes issus du produit de base : la farine, l'eau et le sel, l'équilibre gustatif et la qualité de l'embouteillage, est arrivé le produit que nous vous presentons aujourd'hui la <span class="color">BreadBeer</span> !</p>
+            <p><a href="products.php">On vous invite à découvrir plus en détail nos produits en cliquant ici</a>.</p>
         </article>
 
         <article>
-            <h2>I'm generally confused most of the time.</h2>
-            <p>I'm a sociopath; there's not much he can do for me. Somehow, I doubt that. You have a good heart, Dexter. I'm partial to air conditioning. This man is a knight in shining armor.<br />
-            I will not kill my sister. I will not kill my sister. I will not kill my sister. Finding a needle in a haystack isn't hard when every straw is computerized. Somehow, I doubt that. You have a good heart, Dexter.
-            I think he's got a crush on you, Dex! I've lived in darkness a long time. Over the years my eyes adjusted until the dark became my world and I could see. This man is a knight in shining armor. I'm doing mental jumping jacks.</p>
-            <p>Pretend. You pretend the feelings are there, for the world, for the people around you. Who knows? Maybe one day they will be. I'm not the monster he wants me to be. So I'm neither man nor beast. I'm something new entirely. With my own set of rules. I'm Dexter. Cops, another community I'm not part of. I'm doing mental jumping jacks. I have a dark side, too. I feel like a jigsaw puzzle missing a piece. And I'm not even sure what the picture should be.<br />
-            Rorschach would say you have a hard time relating to others. Watching ice melt. This is fun. I've lived in darkness a long time. Over the years my eyes adjusted until the dark became my world and I could see.</p>
+            <h2>Où sommes-nous ?</h2>
+            <p>Originaire de Stuttgart, un petit village Allemand, nous avons décidé d'y installer notre siège ainsi que notre usine. </p>
+            <p>C'est donc au 17 rue Königstrasse, que vous pourrez retrouver nos locaux.</p>
+            <p>Nous y organisons régulierement des visites. Accompagnées par un de nous deux, nous aurons le plaisir de vous faire visiter cette magnifique usine.</p>
         </article>
 
         <article>
-            <h2>Only you could make those words cute.</h2>
-            <p>You're a killer. I catch killers. He taught me a code. To survive. You look…perfect. Somehow, I doubt that. You have a good heart, Dexter. Tell him time is of the essence.<br />
-            Taught me a code. To survive. I think he's got a crush on you, Dex! I'm really more an apartment person. I'm thinking two circus clowns dancing. You? I'm generally confused most of the time. Cops, another community I'm not part of.</p>
+            <h2>Notre produit phare</h2>
+            <p>En projet depuis mi-2017, nous avons la fierté d'annoncer l'aboutissement de ce long projet en ce début d'année 2019 !</p>
+            <p>La recette de cette délicieuse boisson a été conçu au fur et à mesure, après moult essais, afin d'avoir un équilibre parfait entre tous les ingrédients, les arômes et les vertus apaisante de cette boisson qu'on ne présente plus.</p>
+            <p>Les ingrédients primaires, issu des invendus des boulangeries, representent plus de 50% du produit. L'utilisation de ces ingrédients est un geste engagé à nos yeux, afin de réduire à notre échelle le gaspillage alimentaire qui est un fléau de notre société. Ainsi grâce à ce petit geste, nous sommes heureux et fière d'aller récolter pendant 2 jours chaque semaine chez la pluspart des boulangeries de Stuttgart ces restes.</p>
+            <p>La vente de cet incroyable produit, la <span class="color">BreadBeer</span>, s'effectue uniquement par commande sur cette addresse email : <a href="#">biere |at| apprendre.co</a>.</p>
+            <p>1 bouteille de 50cl = 15€</p>
         </article>
 
         <article>
-            <h2>Finding a needle in a haystack isn't hard when every straw is computerized.</h2>
-            <p>Pretend. You pretend the feelings are there, for the world, for the people around you. Who knows? Maybe one day they will be. You're a killer. I catch killers. I'm really more an apartment person. Tonight's the night. And it's going to happen again and again. It has to happen.</p>
-            <ul>
-                <li>I'm not the monster he wants me to be. So I'm neither man nor beast. I'm something new entirely. With my own set of rules. I'm Dexter. Boo.</li>
-                <li>I've lived in darkness a long time. Over the years my eyes adjusted until the dark became my world and I could see.</li>
-                <li>I'm real proud of you for coming, bro. I know you hate funerals.</li>
-            </ul>
-            <p>Pretend. You pretend the feelings are there, for the world, for the people around you. Who knows? Maybe one day they will be. I'm not the monster he wants me to be. So I'm neither man nor beast. I'm something new entirely. With my own set of rules. I'm Dexter. Boo.</p>
+            <h2>Offre Promotionnelle</h2>
+            <p>Actuellement, et ce jusqu'au <strong>26/04/2019</strong> à <strong>17H00</strong> une excellente offre de lancement est mise en place : <br /><span class="color">Pour l'achat d'une bouteille 3 sont offertes !</span></p>
+            <p>C'est l'occasion de faire profiter, de partager, avec votre entourage de ce nouveau produit qui est toute objectivité le meilleur qui soit !</p>
         </article>
 
 <?php include 'footer.php' ?>
