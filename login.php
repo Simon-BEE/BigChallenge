@@ -6,7 +6,6 @@ include('/header.php');
 if ($connect) {
     header("Location: index.php");
 }
-
 if(!empty($_POST)){
     $email = strtolower($_POST["email"]);
     $password = $_POST["password"];
@@ -19,7 +18,7 @@ if(!empty($_POST)){
         $usermail = $state->fetch();
         
         /* verifier couple user / mdp */
-        if($usermail){
+        if(isset($usermail)){
             if (password_verify($password, $usermail["password"])){
                     $_SESSION["connect"] = true;
                     $_SESSION["email"] = $email;

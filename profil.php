@@ -4,11 +4,11 @@ require 'db.php';
 require 'connect.php';
 
 if ($connect) {
-    require_once 'db.php';
+    /*require_once 'db.php';
     $sql2 = "SELECT * FROM users WHERE `email`= :email";
     $state = $pdo->prepare($sql2);
     $state->execute([":email" => $_SESSION["email"]]);
-    $usermail = $state->fetch();
+    $usermail = $state->fetch();*/
     if ($usermail) {
         $prenom = $usermail["prenom"];
         $id = $usermail["id"];
@@ -82,22 +82,24 @@ if ($connect) {
 
     <div class="commandes">
         <h2>Récapitulatif de tes anciennes commandes</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <?php
+        $sql1 = 'SELECT * FROM `commande` WHERE id_client = ?';
+        $statements1 = $pdo->prepare($sql1);
+        $statements1->execute([$usermail["id"]]);
+        $result1 = $statements1->fetchAll();
+        //var_dump($result1); die();
+        if ($result1) {
+            //var_dump($result1[0][2]); die();
+            echo unserialize($result1[0][2]);
+        }else{
+            echo "<p>Vous n'avez pas encore passé de commandes ! <a href=\"order.php\">Passez une commande</a> !";
+        }
+        ?>
     </div>
 
     <p>T'as fait le tour ? <a href="index.php?deconnect=true">Déconnecte toi</a></p>
-    <p><a class="deconnect" href="">Supprimer mon compte</a></p>
+    <p><a class="deconnect" href="delete.php">Supprimer mon compte</a> (⚠ IRREVERSIBLE ⚠)</p>
 
 </section>
 

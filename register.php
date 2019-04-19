@@ -20,12 +20,6 @@ if(!empty($_POST)){
     $password = $_POST["password"];
     $passwordVerif = $_POST["password_verif"];
     if (!empty($prenom) && !empty($nom) && !empty($address) && !empty($zipcode) && !empty($ville) && !empty($pays) && !empty($phone) && !empty($email) && !empty($password)){
-        require_once 'db.php';
-        $sql2 = "SELECT * FROM users WHERE `email`= :email";
-        $state = $pdo->prepare($sql2);
-        $state->execute([":email" => $email]);
-        $usermail = $state->fetch();
-        
         if (!$usermail) {
             if(strlen($password) <= 10 && strlen($password) >= 5){
                 if($password === $passwordVerif){
