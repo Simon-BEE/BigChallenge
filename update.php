@@ -1,66 +1,80 @@
 <?php
 require 'connect.php';
 require 'db.php';
-//var_dump($_POST);die();
-if(!empty($_POST)){
-    $username = strtolower($_POST["username"]);
-    $password = $_POST["password"];
-    $id = $_POST["id"];
 
-    if(!empty($id)){
-        if(!empty($username)){
-            require_once 'db.php';
-            $sql = "SELECT * FROM users WHERE `name`= ?";
-            $statement = $pdo->prepare($sql);
-            $statement->execute([$username]);
-            $user = $statement->fetch();
+if ($connect) {
+    require_once 'db.php';
+    $sql2 = "SELECT * FROM users WHERE `email`= :email";
+    $state = $pdo->prepare($sql2);
+    $state->execute([":email" => $_SESSION["email"]]);
+    $usermail = $state->fetch();
+
+    if (!empty($_POST)) {
+        $prenom = ($_POST["prenom"]);
+        $nom = ($_POST["nom"]);    
+        $address = ($_POST["address"]);
+        $zipcode = ($_POST["zipcode"]);
+        $ville = ($_POST["ville"]);
+        $pays = ($_POST["pays"]);
+        $phone = ($_POST["phone"]);
+        $id = ($_POST["id"]);
+        $password = $_POST["password"];
+        $password_verif = $_POST["password_verif"];    
         
-            if(!$user){
-                if(!empty($password)){
-                    if(strlen($password) <= 10 && strlen($password) >= 5){
-                        $password = password_hash($password, PASSWORD_BCRYPT);
-                        require_once 'db.php';
-                        $sql = "UPDATE `users` SET `name` = :name, `password` = :password WHERE `users`.`id` = :id";
-                        $statement = $pdo->prepare($sql);
-                        $result = $statement->execute([
-                            ":name"     =>  $username,
-                            ":password" =>  $password,
-                            ":id"       =>  $id
-                        ]);
-                    }else{
-                        die("mdp mauvais format");
-                        // TODO cree erreur
-                    }
-                }else{
-                    //modification uniquement name
+        if (!empty($prenom) && !empty($nom) && !empty($address) && !empty($zipcode) && !empty($ville) && !empty($pays) && !empty($phone)) {
+            if (!empty($password) && !empty($password_verif)) {
+                if(strlen($password) <= 10 && strlen($password) >= 5  && $password = $password_verif){
+                    $password = password_hash($password, PASSWORD_BCRYPT);
                     require_once 'db.php';
-                    $sql = "UPDATE `users` SET `name` = :name WHERE `users`.`id` = :id";
+                    $sql = "UPDATE `users` SET `prenom`= :prenom,`nom`= :nom,`address`= :address,`zipcode`= :zipcode,`ville`= :ville,`pays`= :pays,`phone`= :phone,`password`= :pasword WHERE `users`.`id` = :id";
                     $statement = $pdo->prepare($sql);
                     $result = $statement->execute([
-                        ":name"     =>  $username,
-                        ":id"       =>  $id
-                    ]);
-                }
-            }else{
-                if(!empty($password)){
-                    if(strlen($password) <= 10 && strlen($password) >= 5){
-                        $password = password_hash($password, PASSWORD_BCRYPT);
-                        require_once 'db.php';
-                        $sql = "UPDATE `users` SET `name` = :name, `password` = :password WHERE `users`.`id` = :id";
-                        $statement = $pdo->prepare($sql);
-                        $result = $statement->execute([
-                            ":name"     =>  $username,
-                            ":password" =>  $password,
-                            ":id"       =>  $id
+                        ":nom" => $nom,
+                        ":prenom" => $prenom,
+                        ":address" => $address,
+                        ":zipcode" => $zipcode,
+                        ":ville" => $ville,
+                        ":pays" => $pays,
+                        ":phone" => $phone,
+                        ":id" => $id,
+                        ":password" => $password
                         ]);
-                    }
-                }else{
-                    die("username existe déjà");
-                    // TODO cree erreur
+                    var_dump($password); die('aaaa');
                 }
+            } else {
+                require_once 'db.php';
+                $sql3 = "UPDATE `users` SET `prenom`= :prenom,`nom`= :nom,`address`= :address,`zipcode`= :zipcode,`ville`= :ville,`pays`= :pays,`phone`= :phone WHERE `users`.`id` = :id";
+                $statement3 = $pdo->prepare($sql3);
+                $statement3->execute([
+                    ":nom" => $nom,
+                    ":prenom" => $prenom,
+                    ":address" => $address,
+                    ":zipcode" => $zipcode,
+                    ":ville" => $ville,
+                    ":pays" => $pays,
+                    ":phone" => $phone,
+                    ":id" => $id
+                    ]);
+                die('Transaction done');
             }
+                
+        } else {
+            die('Veuillez remplir tous les champs');
         }
+    } else {
+        $user = false;
+        $id = false;
+        $nom = false;    
+        $address = false;
+        $zipcode = false;
+        $ville = false;
+        $pays = false;
+        $phone = false;
+        $password = false;
+        $passwordVerif = false;
     }
+} else {
+    header('Location: login.php');
 }
 
 header("Location: profil.php");

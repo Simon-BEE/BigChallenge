@@ -48,6 +48,7 @@ if(!empty($_POST)){
                     if($result){
                         $_SESSION["connect"] = true;
                         $_SESSION["nom"] = $nom;
+                        $_SESSION["email"] = $email;
                         header("Location: success.php");
                     }else{
                         die("erreur enregistrement en bdd");

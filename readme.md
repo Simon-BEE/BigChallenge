@@ -31,8 +31,11 @@ Créez un formulaire contenant les champs suivants:
 Vérifiez les données reçu puis établir ou non la connexion
 ## 7. Création espace client
 Créer un espace client html5 qui présentera:
-* Une possibilité de modifier ses données personnelle hors adresse mail.
-* Un tableau affichant le contenu des commandes passé par l’utilisateur.
+* Une possibilité de modifier ses données personnelles hors adresse mail.
+* Un tableau affichant le contenu des commandes passées par l’utilisateur.
+* Numéro de commande
+* Nombre de référence produit
+* Prix total de la commande
 ## 8. Petite aide
 * La table commande disposera de 3 colonnes:
     * id(int)
@@ -46,6 +49,6 @@ Créer un espace client html5 qui présentera:
 - [x] Implanter tableau des bières dans la bdd
 - [x] Ajout nouveau utilisateur dans une table dans la bdd
 - [x] Faire fonctionner le système de connexion
-- [ ] Pouvoir modifier ses informations perso
+- [x] Pouvoir modifier ses informations perso
 - [ ] Tableau récap des commandes
 - [ ] Vérifier toutes les fonctionnalités et les potentielles failles
