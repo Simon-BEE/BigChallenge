@@ -56,11 +56,7 @@ $beerArray = [
         ]
     ];
 
-    /* for ($i=0; $i < count($beerArray) ; $i++) { 
-            echo '<div class="row col-lg-4 col-md-6 align-items-start d-flex flex-columns justify-content-center"><h3 class="h3 text-center col-12 align-self-start text-success text-truncate">'. $beerArray[$i][0] .'</h3><img class="align-self-start w-50" src="'. $beerArray[$i][1] .'" alt="Image de la biere"><p class="text-justify col-12 align-self-start">'. substr((string)$beerArray[$i][2],0,150) .'...</p><p class="text-center col-12 align-self-start font-weight-bold text-success bouton" onclick="clic()">'. number_format($beerArray[$i][3]*1.2, 2, ',', '.') . '€' . '</p><hr class="col-12 d-block d-sm-none"/></div>';
-            //number_format($beerArray[$i][3]*1.2, 2, ',', '.') Prix trafique avec une seule methode
-            //str_replace('.',',',round($beerArray[$i][3]*1.2,2))
-    }*/
+    $tva = 1.2;
 
 
     ?>

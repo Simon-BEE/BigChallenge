@@ -24,7 +24,7 @@ if ($connect) {
 
     <div class="welcome">
         <h2>Bonjour, <?= $user ?>.</h2>
-        <p>Content de te revoir !</p>
+        <p>Envie d'une petite bière ? <a href="order.php">Passe une commande</a> !</p>
     </div>
 
     <div class="modifier form">
@@ -71,7 +71,8 @@ if ($connect) {
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
 
-    <p>T'as fait le tour ?<a href="index.php?deconnect=true">Déconnecte toi</a></p>
+    <p>T'as fait le tour ? <a href="index.php?deconnect=true">Déconnecte toi</a></p>
+    <p><a class="deconnect" href="">Supprimer mon compte</a></p>
 
 </section>
 

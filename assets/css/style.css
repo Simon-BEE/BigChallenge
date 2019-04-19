@@ -121,7 +121,7 @@ a.to_nav:hover, a.to_nav:focus {
     background-color: #ccc;
 }
 
-#primary_nav li a.deconnect {
+#primary_nav li a.deconnect, a.deconnect {
     color: #EF5350;
 }
 
@@ -146,21 +146,26 @@ section.form {
     flex-direction: column;
 }
 
-.form form input {
+.form form input, .form form button {
     border: none;
     margin: 10px 0;
     padding: 5px 0;
     border-radius: 3px;
 }
 
-.form form input[type="submit"] {
+.form form input[type="submit"], .form form button {
     background-color: #C5E1A5;
     width: 50%;
     margin: 0 auto;
     margin-bottom: 20px;
 }
 
-.form form input[type="email"], .form form input[type="password"], .form form input[type="text"] {
+.form form input[type="submit"]:hover, .form form input[type="submit"]:focus, .form form button:hover, .form form button:focus {
+    background-color: #1c1c1c;
+    color: #eee;
+}
+
+.form form input[type="email"], .form form input[type="password"], .form form input[type="text"], .form form input[type="number"] {
     border-bottom: 1px solid #C5E1A5;
 }
 
@@ -181,6 +186,29 @@ section.form {
     width: 40%;
     height: 40%;
 }
+
+/* TABLE */
+
+td {
+    padding: 5px 8px;
+    border-bottom: 1px solid #C5E1A5;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr th {
+    font-weight: bold;
+    color: #C5E1A5;
+    padding: 5px 2px;
+}
+
+.form form input[type="number"] {
+    width: 50%;
+    margin-left: 10px;
+}
+
 
 
 /* --- MEDIA QUERIES --- */
@@ -264,4 +292,9 @@ section.form {
         font-weight: bold;
         font-size: 20px;
     }
+
+    .form form button {
+        margin: 10px 30px;
+    }
+
 }
