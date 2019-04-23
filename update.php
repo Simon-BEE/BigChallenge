@@ -33,7 +33,8 @@ if ($connect) {
                         ":id" => $id,
                         ":password" => $password
                         ]);
-                    var_dump($password); die('aaaa');
+                } else {
+                    die('Erreur mot de passe ! <a href="http://localhost/hardcore/profil.php">Revenez sur la page Profil</a>');
                 }
             } else {
                 require_once 'db.php';
@@ -49,11 +50,11 @@ if ($connect) {
                     ":phone" => $phone,
                     ":id" => $id
                     ]);
-                die('Transaction done');
+                die('Modification réussie ! <a href="http://localhost/hardcore/profil.php">Revenez sur la page Profil</a>');
             }
                 
         } else {
-            die('Veuillez remplir tous les champs');
+            die('Les champs ne sont pas tous remplis ! ! <a href="http://localhost/hardcore/profil.php">Revenez sur la page Profil</a>');
         }
     } else {
         $user = false;

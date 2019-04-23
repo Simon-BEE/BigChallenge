@@ -99,7 +99,7 @@ if ($connect) {
                     echo $tabRecap[$i][$j] . "<br />";
                 }
                 //echo $tabRecap[$i][$i] . "<br />";
-                echo "<strong>Pour un total de " . $result1[$i][3] . "</strong><br /><br />";
+                echo "<p class='totalTTC'>Pour un total de " . $result1[$i][3] . "</p><br /><br />";
             }
         }else{
             echo "<p>Vous n'avez pas encore passé de commandes ! <a href=\"order.php\">Passez une commande</a> !";

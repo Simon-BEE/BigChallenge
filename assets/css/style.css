@@ -98,6 +98,11 @@ a.to_nav:hover, a.to_nav:focus {
     background-color: #ccc;
 }
 
+.totalTTC {
+    font-weight: bold;
+    text-align: right;
+}
+
 /* MENU */
 
 #primary_nav ul {

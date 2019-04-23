@@ -51,4 +51,5 @@ Créer un espace client html5 qui présentera:
 - [x] Faire fonctionner le système de connexion
 - [x] Pouvoir modifier ses informations perso
 - [x] Tableau récap des commandes
-- [ ] Vérifier toutes les fonctionnalités et les potentielles failles
+- [x] Vérifier toutes les fonctionnalités
+- [ ] Vérifier les potentielles failles

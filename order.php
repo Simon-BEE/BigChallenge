@@ -66,7 +66,7 @@
 					</table>
 
 						<button type="submit">COMMANDER</button>
-
+						<p style="text-align:center;">Si votre commande est inférieur à 30€, des frais de port d'un montant de 5,40€ vous seront facturés !</p>
 				</div>
 			</form>
 		</div>
