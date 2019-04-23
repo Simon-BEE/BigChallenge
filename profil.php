@@ -90,8 +90,17 @@ if ($connect) {
         $result1 = $statements1->fetchAll();
         //var_dump($result1); die();
         if ($result1) {
-            //var_dump($result1[0][2]); die();
-            echo unserialize($result1[0][2]);
+            //var_dump($result1); die();
+            for ($i=0; $i < count($result1) ; $i++) { 
+                $tabRecap[$i] = unserialize($result1[$i][2]);
+                echo "<h3>Commande n°" . $result1[$i][0] . "</h3><br />";
+                for ($j=0; $j < count($tabRecap[$i]) ; $j++) {
+                    //var_dump($tabRecap); die();
+                    echo $tabRecap[$i][$j] . "<br />";
+                }
+                //echo $tabRecap[$i][$i] . "<br />";
+                echo "<strong>Pour un total de " . $result1[$i][3] . "</strong><br /><br />";
+            }
         }else{
             echo "<p>Vous n'avez pas encore passé de commandes ! <a href=\"order.php\">Passez une commande</a> !";
         }

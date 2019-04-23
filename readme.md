@@ -50,5 +50,5 @@ Créer un espace client html5 qui présentera:
 - [x] Ajout nouveau utilisateur dans une table dans la bdd
 - [x] Faire fonctionner le système de connexion
 - [x] Pouvoir modifier ses informations perso
-- [ ] Tableau récap des commandes
+- [x] Tableau récap des commandes
 - [ ] Vérifier toutes les fonctionnalités et les potentielles failles

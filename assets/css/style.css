@@ -24,6 +24,13 @@ h2 {
     margin: 0 0 .4em;
 }
 
+h3 {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #C5E1A5;
+}
+
 /* LAYOUT */
 
 .wrapper {
