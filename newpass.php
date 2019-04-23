@@ -1,7 +1,7 @@
 <?php
-require 'db.php';
-require 'connect.php';
-include ('header.php');
+require '/include/db.php';
+require '/include/connect.php';
+include ('/include/header.php');
 $message = "";
 if (!$connect) {
     if (!empty($_POST['email'])) {
@@ -46,4 +46,4 @@ if (!$connect) {
     </form>
 </section>
 
-<?php include ('footer.php'); ?>
+<?php include ('/include/footer.php'); ?>

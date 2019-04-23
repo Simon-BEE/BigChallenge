@@ -15,8 +15,8 @@ if ($connect) {
     $statement = $pdo->prepare($sql);
     $statement->execute([$id]);
 
-    header('Location: index.php');
+    header('Location: ../index.php');
 }
 } else {
-    header('Location : login.php');
+    header('Location : ../login.php');
 }

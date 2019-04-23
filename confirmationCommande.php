@@ -1,7 +1,7 @@
 <?php 
-include('header.php');
-include('beerarray.php');
-require 'connect.php';
+include('/include/header.php');
+include('/include/beerarray.php');
+require '/include/connect.php';
 if (!$connect) {
 	header('Location: index.php');
 }
@@ -97,4 +97,4 @@ $result = $statement->execute([
 </section>
 		
 <?php } ?>
-<?php include('footer.php'); ?>
+<?php include('/include/footer.php'); ?>

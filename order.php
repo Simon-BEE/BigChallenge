@@ -1,10 +1,10 @@
 <?php 
-	include('beerarray.php');
-	include ('header.php');
-	require 'connect.php';
+	include('/include/beerarray.php');
+	include ('/include/header.php');
+	require '/include/connect.php';
 
 	if (!$connect) {
-		header('Location: index.php');
+		header('Location: login.php');
 	}
 ?>
 	<div class="form">
@@ -65,8 +65,8 @@
 						</tbody>
 					</table>
 
-						<button type="submit">COMMANDER</button>
-						<p style="text-align:center;">Si votre commande est inférieur à 30€, des frais de port d'un montant de 5,40€ vous seront facturés !</p>
+					<button type="submit">COMMANDER</button>
+					<p style="text-align:center;">Si votre commande est inférieur à 30€, des frais de port d'un montant de 5,40€ vous seront facturés !</p>
 				</div>
 			</form>
 		</div>
@@ -98,4 +98,4 @@
 		}
 	</script>
 
-<?php include('footer.php'); ?>
+<?php include('/include/footer.php'); ?>

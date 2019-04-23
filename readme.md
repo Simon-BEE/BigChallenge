@@ -53,3 +53,6 @@ Créer un espace client html5 qui présentera:
 - [x] Tableau récap des commandes
 - [x] Vérifier toutes les fonctionnalités
 - [ ] Vérifier les potentielles failles
+# Installation
+* Remplir les variables du config_sample.php avec les valeurs correspondantes puis renommer ce fichier en config.php
+* Modifier certaines url qui sont en absolu

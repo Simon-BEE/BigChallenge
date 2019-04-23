@@ -69,7 +69,7 @@ if ($connect) {
         $passwordVerif = false;
     }
 } else {
-    header('Location: login.php');
+    header('Location: ../login.php');
 }
 
-header("Location: profil.php");
+header("Location: ../profil.php");

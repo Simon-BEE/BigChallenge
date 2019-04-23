@@ -1,6 +1,6 @@
 <?php 
-include 'header.php';
-require 'connect.php';
+include '/include/header.php';
+require '/include/connect.php';
 ?>
 
         <article>
@@ -33,4 +33,4 @@ require 'connect.php';
             <p>C'est l'occasion de faire profiter, de partager, avec votre entourage de ce nouveau produit qui est toute objectivité le meilleur qui soit !</p>
         </article>
 
-<?php include 'footer.php' ?>
+<?php include '/include/footer.php' ?>

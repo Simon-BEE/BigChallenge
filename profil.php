@@ -1,7 +1,7 @@
 <?php 
-include('/header.php');
-require 'db.php';
-require 'connect.php';
+include('/include/header.php');
+require '/include/db.php';
+require '/include/connect.php';
 
 if ($connect) {
     /*require_once 'db.php';
@@ -46,7 +46,7 @@ if ($connect) {
 
     <div class="modifier form">
         <h2>Tu peux modifier tes informations personnelles</h2>
-        <form class="" method="POST" action="update.php">
+        <form class="" method="POST" action="http://localhost/hardcore/include/update.php">
             <label for="prenom">Prénom</label>
             <input type="text" name="prenom" value="<?= $prenom ?>" required>
 
@@ -99,7 +99,7 @@ if ($connect) {
                     echo $tabRecap[$i][$j] . "<br />";
                 }
                 //echo $tabRecap[$i][$i] . "<br />";
-                echo "<p class='totalTTC'>Pour un total de " . $result1[$i][3] . "</p><br /><br />";
+                echo "<p class='totalTTC'>Pour un total de " . $result1[$i][3] . "€</p><br /><br />";
             }
         }else{
             echo "<p>Vous n'avez pas encore passé de commandes ! <a href=\"order.php\">Passez une commande</a> !";
@@ -108,8 +108,8 @@ if ($connect) {
     </div>
 
     <p>T'as fait le tour ? <a href="index.php?deconnect=true">Déconnecte toi</a></p>
-    <p><a class="deconnect" href="delete.php">Supprimer mon compte</a> (⚠ IRREVERSIBLE ⚠)</p>
+    <p><a class="deconnect" href="http://localhost/hardcore/include/delete.php">Supprimer mon compte</a> (⚠ IRREVERSIBLE ⚠)</p>
 
 </section>
 
-<?php include('/footer.php');  ?>
+<?php include('/include/footer.php');  ?>

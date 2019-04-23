@@ -1,7 +1,7 @@
 <?php 
-require 'db.php';
-include('/header.php');
-require 'connect.php';
+require '/include/db.php';
+include('/include/header.php');
+require '/include/connect.php';
 $message = "";
 
 if ($connect) {
@@ -32,7 +32,7 @@ if(!empty($_POST)){
             if(strlen($password) <= 10 && strlen($password) >= 5){
                 if($password === $passwordVerif){
                     $password = password_hash($password, PASSWORD_BCRYPT);
-                    require_once 'db.php';
+                    require_once '/include/db.php';
                     $sql = 'INSERT INTO users (prenom, nom, address, zipcode, ville, pays, phone, email, password) VALUES (:prenom, :nom, :address, :zipcode, :ville, :pays, :phone, :email, :password)';
                     $statement = $pdo->prepare($sql);
                     $result = $statement->execute([
@@ -54,7 +54,7 @@ if(!empty($_POST)){
                         header("Location: success.php");
                     }else{
                         //die("erreur enregistrement en bdd");
-                        $message = 'Erreur enregistrement en bdd';
+                        $message = 'Erreur d\'enregistrement';
                     }
 
                 }else{
@@ -115,4 +115,4 @@ if(!empty($_POST)){
     <p>Déjà inscrit ? <a href="login.php">Connectez-vous</a> !</p>
 </section>
 
-<?php include('/footer.php');  ?>
+<?php include('/include/footer.php');  ?>

@@ -1,7 +1,7 @@
 <?php 
-require 'db.php';
-require 'connect.php';
-include('/header.php');
+require '/include/db.php';
+require '/include/connect.php';
+include('/include/header.php');
 $message = "";
 
 if ($connect) {
@@ -60,4 +60,4 @@ if(!empty($_POST)){
     <p>Pas encore inscrit ? <a href="register.php">Inscrivez-vous</a> !</p>
 </section>
 
-<?php include('/footer.php');  ?>
+<?php include('/include/footer.php');  ?>
