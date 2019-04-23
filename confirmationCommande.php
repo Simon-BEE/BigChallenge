@@ -60,6 +60,21 @@ $result = $statement->execute([
 				endif ;
 			endforeach; ?>
 			<tr>
+				<td><strong>Frais de port</strong></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><strong>
+					<?php
+					if ($totalTTC <= 30) {
+						echo "5,40";
+					} else {
+						echo '0';
+					}
+					?>
+				€</strong>*</td>
+			</tr>
+			<tr>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -71,14 +86,14 @@ $result = $statement->execute([
 					}
 					echo number_format($totalTTC, 2, ',', '.');
 					?>
-				€</strong>*</td>
+				€</strong></td>
 			</tr>
 		</tbody>
 	</table>
 	<p style="text-align: center;">Celle-ci vous sera livrée au <strong><?= $usermail['address'] . '</strong> à <strong>' . $usermail['ville'] ?></strong> sous deux jours.</p>
 	<p style="text-align:center;">Un de numéro de suivi vous sera communiqué sur votre adresse mail dès que la commande sera envoyé.</p>
 	<p style="text-align:center;"><a href="http://localhost/hardcore/order.php">J'en veux encore ! </a></p>
-	<p style="text-align:center;">* Si votre commande est inférieur à 30€, des frais de port d'un montant de 5,40€, vous seront facturés !</p>
+	<p style="text-align:center;">* Si votre commande est inférieur à 30€, des frais de port d'un montant de 5,40€, vous sont facturés !</p>
 </section>
 		
 <?php } ?>

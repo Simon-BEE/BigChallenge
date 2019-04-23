@@ -133,7 +133,7 @@ a.to_nav:hover, a.to_nav:focus {
     background-color: #ccc;
 }
 
-#primary_nav li a.deconnect, a.deconnect {
+#primary_nav li a.deconnect, a.deconnect, p.deconnect {
     color: #EF5350;
 }
 

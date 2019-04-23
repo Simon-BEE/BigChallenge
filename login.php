@@ -2,6 +2,7 @@
 require 'db.php';
 require 'connect.php';
 include('/header.php');
+$message = "";
 
 if ($connect) {
     header("Location: index.php");
@@ -25,15 +26,18 @@ if(!empty($_POST)){
                     header("Location: profil.php");
             }else{
                 header("HTTP/1.0 403 Forbidden");
-                echo 'Email ou Mot de passe incorrect 01!<br /><a href="login.php">Réessayer</a>';
+                //echo 'Email ou Mot de passe incorrect 01!<br /><a href="login.php">Réessayer</a>';
+                $message = 'Email ou Mot de passe incorrect';
             }
         }else{
             header("HTTP/1.0 403 Forbidden");
-            echo 'Email ou Mot de passe incorrect 02!<br /><a href="login.php">Réessayer</a>';
+            //echo 'Email ou Mot de passe incorrect 02!<br /><a href="login.php">Réessayer</a>';
+            $message = 'Email ou Mot de passe incorrect';
         }
     }else{
         header("HTTP/1.0 403 Forbidden");
-        echo 'Email ou Mot de passe incorrect 03!<br /><a href="login.php">Réessayer</a>';
+        //echo 'Email ou Mot de passe incorrect 03!<br /><a href="login.php">Réessayer</a>';
+        $message = 'Veuillez remplir tous les champs';
     }
 }
 
@@ -50,7 +54,9 @@ if(!empty($_POST)){
         <input type="password" name="password" required>
 
         <input class="button" type="submit" name="submit_c" value="Se connecter">
+        <p class="deconnect"><?= $message ?></p>
     </form>
+    <p><a href="newpass.php">Vous avez oublié votre mot de passe ?</a></p>
     <p>Pas encore inscrit ? <a href="register.php">Inscrivez-vous</a> !</p>
 </section>
 

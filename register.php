@@ -2,11 +2,13 @@
 require 'db.php';
 include('/header.php');
 require 'connect.php';
+$message = "";
 
 if ($connect) {
     header("Location: index.php");
 }
 
+//var_dump($usermail); die();
 
 if(!empty($_POST)){
     $prenom = ($_POST["prenom"]);
@@ -19,6 +21,12 @@ if(!empty($_POST)){
     $email = ($_POST["email"]);
     $password = $_POST["password"];
     $passwordVerif = $_POST["password_verif"];
+
+    $sql2 = "SELECT * FROM users WHERE `email`= :email";
+    $state = $pdo->prepare($sql2);
+    $state->execute([":email" => $email]);
+    $usermail = $state->fetch();
+
     if (!empty($prenom) && !empty($nom) && !empty($address) && !empty($zipcode) && !empty($ville) && !empty($pays) && !empty($phone) && !empty($email) && !empty($password)){
         if (!$usermail) {
             if(strlen($password) <= 10 && strlen($password) >= 5){
@@ -45,25 +53,26 @@ if(!empty($_POST)){
                         $_SESSION["email"] = $email;
                         header("Location: success.php");
                     }else{
-                        die("erreur enregistrement en bdd");
-                        // TODO : signaler erreur
+                        //die("erreur enregistrement en bdd");
+                        $message = 'Erreur enregistrement en bdd';
                     }
 
                 }else{
-                    die("mdp différents");
-                    // TODO : signaler que mdp non identiques
+                    //die("mdp différents");
+                    $message = 'Mot de passe différent';
                 }
             }else{
-                // TODO : signaler que mdp est pas d'un bon format
-                die("mdp pas bon format");
+                //die("mdp mauvais format");
+                $message = 'Mot de passe n\'est pas au bon format';
             }
         }else{
-            die("utilisateur existe");
-            // TODO : signaler que nom existe
+            //die("utilisateur existe");
+            $message = 'Cette adresse email est déjà enregistré';
         }
     
     }else{
-        die('Il manque des champs');
+        //die('Il manque des champs');
+        $message = 'Certains champs ne sont pas remplis';
     }
 }
 
@@ -101,6 +110,7 @@ if(!empty($_POST)){
         <input type="password" name="password_verif" required>
 
         <input class="button" type="submit" name="submit_c" value="S'inscrire">
+        <p class="deconnect"> <?= $message ?></p>
     </form>
     <p>Déjà inscrit ? <a href="login.php">Connectez-vous</a> !</p>
 </section>

@@ -20,7 +20,7 @@ if ($connect) {
                 if(strlen($password) <= 10 && strlen($password) >= 5  && $password = $password_verif){
                     $password = password_hash($password, PASSWORD_BCRYPT);
                     require_once 'db.php';
-                    $sql = "UPDATE `users` SET `prenom`= :prenom,`nom`= :nom,`address`= :address,`zipcode`= :zipcode,`ville`= :ville,`pays`= :pays,`phone`= :phone,`password`= :pasword WHERE `users`.`id` = :id";
+                    $sql = "UPDATE `users` SET `prenom`= :prenom,`nom`= :nom,`address`= :address,`zipcode`= :zipcode,`ville`= :ville,`pays`= :pays,`phone`= :phone,`password`= :password WHERE `users`.`id` = :id";
                     $statement = $pdo->prepare($sql);
                     $result = $statement->execute([
                         ":nom" => $nom,
